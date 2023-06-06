@@ -1,6 +1,6 @@
 import app from './app'
 import config from './config'
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
 // const mongoose = require('mongoose')
 
 async function boostrap() {
