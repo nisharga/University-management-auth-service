@@ -8,12 +8,25 @@
     "plugins": ["@typescript-eslint"],
     "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "error",
-      // to enforce using type for object type definitions, can be type or interface 
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"]
-    },
-  
+    // "rules": {
+    //     "no-unused-vars": "error",
+    //     "no-console":"error",
+    //     "no-undef":"error",
+    //     "no-unused-expressions":"error",
+    //     "no-unreachable":"error",
+    //     "consistent-type-definitions": ["error", "type"]
+    //   },
+    // "globals": {
+    //     "process": "readonly"
+    //   },
+    // "rules": {
+    //     "no-unused-vars": "error",
+    //     "no-console": "error",
+    //     "no-undef": "error",
+    //     "no-unused-expressions": "error",
+    //     "no-unreachable": "error",
+    //     "consistent-type-definitions": ["error", "type"]
+    //   },
     "env": {
       "browser": true,
       "es2021": true
