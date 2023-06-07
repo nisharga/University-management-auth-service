@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express, { Application, Request, Response } from 'express'
-const app: Application = express()
+import { createUserController } from './app/modules/user.controller'
+ const app: Application = express()
 // const port = 3000
 
 app.use(cors())
@@ -8,8 +9,13 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req: Request, res: Response) => {
+// Routes
+app.use('/api/v1/users/', createUserController);
+
+
+app.get('/', async (req: Request, res: Response) => {
   res.send('Hello World!')
+ 
 })
 
 export default app
