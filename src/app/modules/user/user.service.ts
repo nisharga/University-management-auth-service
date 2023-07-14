@@ -1,10 +1,11 @@
 import { IUser } from "./user.interface";
 import { User } from "./user.model";
-import config from "../../config/index"; 
+import config from "../../../config/index"; 
 import { generateUserId } from "./user.utlis";
+import ApiError from "../../../errors/ApiErorr";
 
 
-export const createUser = async(user: IUser): Promise<IUser | null> => {
+const createUser = async(user: IUser): Promise<IUser | null> => {
 
     const id = await generateUserId();
     user.id = id;
@@ -15,9 +16,13 @@ export const createUser = async(user: IUser): Promise<IUser | null> => {
    
     const createdUser = await User.create(user);
     if(!createdUser) {
-        throw new Error("Faild To Create User")
+        throw new ApiError(400, "Faild To Create new User...")
     }
     return createdUser;
+}
+
+export const UserService = {
+    createUser
 }
 
  
