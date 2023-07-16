@@ -8,9 +8,9 @@ import { IAcademicDepartment, IAcademicDepartmentFilterRequest } from "./academi
 import { AcademicDepartment } from "./academicDepartmentModel";
 import { academicDepartmentSearchableFields } from "./academicDepartment.constants";
 
-
+// .populate('academicFaculty')
  const createAcademicDepartment = async(payload: IAcademicDepartment): Promise<IAcademicDepartment | null> => {
-    const result = await AcademicDepartment.create(payload);
+    const result = (await AcademicDepartment.create(payload)).populate('academicFaculty');
     return result;
 } 
 

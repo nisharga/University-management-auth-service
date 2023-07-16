@@ -1,3 +1,4 @@
+/* eslint-disable consistent-type-definitions */
  
 import { Response } from "express";
 

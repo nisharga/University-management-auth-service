@@ -20,3 +20,63 @@
   label: 'right meow!',
   timestamp: '2023-06-20T16:26:30.344Z'
 }
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-14T09:33:16.356Z'
+}
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-14T09:33:50.641Z'
+}
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-14T10:01:33.962Z'
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'two no dep' },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-15T10:18:35.024Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-15T10:23:34.261Z'
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Department of EEE (Engineering)' },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-15T14:26:40.066Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Department Two of Super Engineering' },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-15T16:08:18.169Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Department Two of Super Engineering' },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-15T16:12:25.862Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
