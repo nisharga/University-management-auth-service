@@ -4,6 +4,7 @@ import express, { Application, NextFunction, Request, Response } from 'express'
 import globalErrorHandler from './app/middlewares/globalErrorHandler'
 import routes from './app/routes'
 import httpStatus from 'http-status'
+import { errorlogger, logger } from './shared/looger'
 
 
 const app: Application = express()
@@ -34,4 +35,6 @@ app.use((req : Request, res : Response, next: NextFunction) => {
   })
   next();
 })  
+
+
 export default app 

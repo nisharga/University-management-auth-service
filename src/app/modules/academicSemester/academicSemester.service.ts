@@ -51,8 +51,8 @@ const getAllSemesters = async (
 
     const sortConditions:{[key: string]: SortOrder} = {}
 
-    if(sortBy & sortOrder){
-        sortConditions[sortBy] = SortOrder;
+    if(sortBy && sortOrder){
+        sortConditions[sortBy] = sortOrder;
     }
 
     const whereConditions = andConditions.length > 0 ? {$and: andConditions} : {}

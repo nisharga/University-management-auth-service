@@ -12,7 +12,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
   return `${date.toDateString()} ${hour}:${minutes}:${second} [${label}] ${level}: ${message}  `;
 });
  
-const logger = createLogger({
+  const logger = createLogger({
     level: 'info',
     format: combine(
       label({ label: 'PH' }),

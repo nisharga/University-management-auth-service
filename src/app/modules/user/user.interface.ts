@@ -1,4 +1,3 @@
-// eslint-disable-next-line consistent-type-definitions
 import { Model, Types } from "mongoose";
 import { IStudent } from "../student/student.interface";
 

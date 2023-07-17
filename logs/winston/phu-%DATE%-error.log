@@ -80,3 +80,9 @@
   timestamp: '2023-07-15T16:12:25.862Z',
   [Symbol(errorLabels)]: Set(0) {}
 }
+{
+  message: 'JJJ',
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-16T10:12:32.805Z'
+}

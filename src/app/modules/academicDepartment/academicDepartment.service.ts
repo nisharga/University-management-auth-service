@@ -45,7 +45,7 @@ const getAllDepartments = async (
 
     const sortConditions:{[key: string]: SortOrder} = {}
 
-    if(sortBy & sortOrder){
+    if(sortBy && sortOrder){
         sortConditions[sortBy] = sortOrder;
     }
 
