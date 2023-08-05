@@ -7,6 +7,7 @@ import httpStatus from 'http-status';
 import { paginationFields } from '../../../conastants/pagination';
  import { AcademicFacultyService } from './academicFaculty.service';
 import { IAcademicFaculty } from './academicFacultyInterface';
+
 import { academicFacultyFilterableFields } from './academicFaculty.constants';
 
 
@@ -22,7 +23,7 @@ const createFaculty = catchAsync(async (req : Request, res: Response ) => {
 })
 
 const getAllFaculties = catchAsync(async (req : Request, res: Response,  ) => { 
-    
+
     const filters = pick(req.query, academicFacultyFilterableFields);   
     
     const paginationOptions = pick(req.query, paginationFields)

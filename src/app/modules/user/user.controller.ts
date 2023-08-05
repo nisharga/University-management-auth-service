@@ -4,6 +4,7 @@ import { UserService } from './user.service';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
+import { IUser } from './user.interface';
 
 
 const createStudent: RequestHandler = catchAsync(async (req: Request, res: Response) => {
@@ -11,7 +12,8 @@ const createStudent: RequestHandler = catchAsync(async (req: Request, res: Respo
         const {student, ...userData} = req.body;
         
         const result = await UserService.createStudent(student ,userData);
-         sendResponse(res, {
+        
+        sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
             message: "user created successfully",
@@ -21,6 +23,20 @@ const createStudent: RequestHandler = catchAsync(async (req: Request, res: Respo
          
 })
 
+const createFaculy: RequestHandler = catchAsync(
+    async (req: Request, res: Response) => {
+      const { faculty, ...userData } = req.body;
+      const result = await UserService.createFaculty(faculty, userData);
+  
+      sendResponse<IUser>(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: 'Faculy created successfully!',
+        data: result,
+      });
+    }
+  );
 export const UserController = {
-    createStudent
+    createStudent,
+    createFaculy
 }

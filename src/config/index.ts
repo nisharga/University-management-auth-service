@@ -7,4 +7,13 @@ export default {
   port: process.env.PORT,
   database_url: process.env.DATABASE_URL,
   default_student_pass: process.env.DEFAULT_USER_PASS,
+  default_faculty_pass: process.env.DEFAULT_FACULTY_PASS,
+  default_admin_pass: process.env.DEFAULT_ADMIN_PASS,
+  bcrypt_salt_round: process.env.BCRYPT_SALT_ROUNDS,
+  jwt: {
+    jwt_secret: process.env.JWT_SECRET,
+    jwt_expires_in: process.env.JWT_SECRET_EXPIRE_IN,
+    jwt_refresh_token: process.env.JWT_REFRESH_SECRET,
+    jwt_secret_expires_in: process.env.JWT_REFRESH_SECRET_EXPIRE_IN,
+  }
 }
